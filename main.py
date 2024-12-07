@@ -1,10 +1,7 @@
-from pyexpat.errors import messages
-
 import telebot
 from telebot import types
-from telebot.types import KeyboardButton
 
-token = '7559637875:AAE9krUXmuDBCVBFpx667bQOa00thaiC8Bs'
+token = '7991465200:AAF-y2rC0pO6Qqhak89IeKrG8TbX2vp8V7c'
 bot = telebot.TeleBot(token)
 
 
