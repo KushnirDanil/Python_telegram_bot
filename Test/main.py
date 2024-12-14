@@ -32,6 +32,7 @@ def handler_run_car(message):
 
     bot.send_message(message.chat.id, car)
 
+
 # 1. Додати клавіатуру
 @bot.message_handler(commands=['pizza'])
 def handler_pizza(message):

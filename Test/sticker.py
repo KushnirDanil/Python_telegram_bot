@@ -1,15 +1,13 @@
-from pyexpat.errors import messages
-
 import telebot
 import os
-from flask import flask, render_template
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 
 
 token = '7991465200:AAF-y2rC0pO6Qqhak89IeKrG8TbX2vp8V7c'
 bot = telebot.TeleBot(token)
 
-app = flask(__name__)
+app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///example.sqlite"
 
 db = SQLAlchemy(app)
@@ -17,7 +15,7 @@ db = SQLAlchemy(app)
 
 class Base(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    text = db.Column(db.String(), nubllable=False)
+    text = db.Column(db.String(), nullable=False)
 
 @app.route('/')
 def index():
